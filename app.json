@@ -1,7 +1,8 @@
 {
   "expo": {
+    "scheme": "screenTimeApp",
     "name": "ScreenTimeApp",
-    "slug": "ScreenTimeApp",
+    "slug": "screentimeapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +26,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b01ee843-2261-46f9-b75a-b93e6d2e7643"
+      }
+    },
+    "owner": "albertcastillom",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
