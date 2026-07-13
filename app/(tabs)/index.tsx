@@ -1,19 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
+import  DashboardHeader from "../../components/dashboardHeader"
+import { Avatar } from '@tamagui/avatar'
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello Ninjas</Text>
+      <DashboardHeader />
     </View>
   )
 }
-
+  ///TamaGUI avatar component for later
+   /* <Avatar circular size="$6">
+        <Avatar.Image src={require('../../assets/avatar.jpeg')} />
+        <Avatar.Fallback background="grey" />
+      </Avatar> */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   text: {
     color: '#000000',
