@@ -1,9 +1,12 @@
 import React from 'react'
+import { Text, View } from 'react-native'
 
-function session() {
+function Session() {
   return (
-    <div>session</div>
+    <View>
+      <Text>session</Text>
+    </View>
   )
 }
 
-export default session
+export default Session

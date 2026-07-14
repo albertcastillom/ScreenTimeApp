@@ -2,15 +2,14 @@ import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
 import  DashboardHeader from "../../components/dashboardHeader"
 import FocusSession from '../../components/focusSession'
 import Card from '../../components/Card' 
-import { Avatar } from '@tamagui/avatar'
 import { Ionicons } from '@expo/vector-icons'
+import { Link } from 'expo-router'
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <ScrollView>
       <DashboardHeader />
-      <FocusSession />
+      <ScrollView>
       <Card style={{aspectRatio: 1, justifyContent: "space-between"}}>
       <View>
         <Text style={styles.text}>Start Focus Session</Text>
@@ -18,25 +17,12 @@ export default function Index() {
       </View>
       <Ionicons name="play-circle" size={42} />
       </Card>
-
-
-
-      <Card style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-between"}}>
-      <View>
-        <Text style={{fontSize: 18, fontWeight: 'bold'}}>Start Focus Session</Text>
-         <Text style={{fontSize: 12}}>Send a screen time block request</Text>
-      </View>
-      <Ionicons name="play-circle" size={36} />
-      </Card>
+      <Link style={styles.text} href={"/signupLogin"}>Login In </Link>
       </ScrollView>
     </View>
   )
 }
-  ///TamaGUI avatar component for later
-   /* <Avatar circular size="$6">
-        <Avatar.Image src={require('../../assets/avatar.jpeg')} />
-        <Avatar.Fallback background="grey" />
-      </Avatar> */
+  
 const styles = StyleSheet.create({
   container: {
     flex: 1,

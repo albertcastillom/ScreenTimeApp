@@ -1,17 +1,22 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Stack } from 'expo-router'
+import { Stack, useRouter } from 'expo-router'
 
 
 const DashboardHeader = () => {
+
+  const router = useRouter();
+
   return (
     <SafeAreaView style={styles.container}>    
        <Text style={styles.text}>Home</Text>
         <View style={styles.rightActions}>
           <Ionicons name="notifications-outline" size={28}/>
-          <Image source={require("../assets/avatar.jpeg")} style={styles.avatar}/>
+          <Pressable onPress={()=> router.push('/profile')}>
+            <Image source={require("../assets/avatar.jpeg")} style={styles.avatar} />
+          </Pressable>
         </View>
     </SafeAreaView>
   )
